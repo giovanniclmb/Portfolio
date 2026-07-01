@@ -35,7 +35,6 @@ Al pie de la página hay un prompt real. Comandos disponibles: `help`, `whoami`,
 ## Deploy
 
 - **Vercel:** importar el repositorio; detecta Vite automáticamente (build `npm run build`, output `dist/`).
-- **GitHub Pages:** `base: "./"` ya está configurado en `vite.config.ts`, así que el build funciona bajo cualquier subruta. Publicar `dist/` con el [workflow oficial de Vite para Pages](https://vite.dev/guide/static-deploy#github-pages).
 
 ## Diseño y accesibilidad
 
