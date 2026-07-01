@@ -1,6 +1,6 @@
 # Portfolio — Giovanni Colombo
 
-Portfolio personal de una sola página con estética de terminal retro (fósforo ámbar P3 sobre CRT). Construido con **React 19 + TypeScript estricto + Vite**, sin backend: 100 % estático.
+Portfolio personal con estética de terminal retro. Construido con **React 19 + TypeScript estricto + Vite**, sin backend: 100 % estático.
 
 ## Desarrollo
 
