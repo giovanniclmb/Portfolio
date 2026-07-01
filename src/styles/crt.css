@@ -1,0 +1,84 @@
+/*
+ * Efectos CRT: scanlines + viñeta + flicker ocasional.
+ * Overlays con pointer-events: none para no bloquear la interacción.
+ * Se apagan con prefers-reduced-motion y se simplifican en mobile.
+ */
+.crt {
+  position: relative;
+  min-height: 100vh;
+  animation: crt-flicker 12s step-end infinite;
+}
+
+.crt::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 2px,
+    rgb(0 0 0 / 0.14) 2px 3px
+  );
+}
+
+.crt::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 11;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 120% at 50% 45%,
+    transparent 55%,
+    rgb(0 0 0 / 0.42) 100%
+  );
+}
+
+/* Dos parpadeos breves por ciclo de 12s: se nota "cuando lo buscás" */
+@keyframes crt-flicker {
+  0%,
+  91.9%,
+  92.4%,
+  97.4%,
+  97.9%,
+  100% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 0.93;
+  }
+
+  97.5% {
+    opacity: 0.96;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .crt {
+    animation: none;
+  }
+
+  .crt::before {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0 2px,
+      rgb(0 0 0 / 0.08) 2px 3px
+    );
+  }
+
+  .crt::after {
+    background: radial-gradient(
+      130% 130% at 50% 45%,
+      transparent 65%,
+      rgb(0 0 0 / 0.3) 100%
+    );
+  }
+}

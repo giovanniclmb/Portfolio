@@ -1,0 +1,62 @@
+.terminal {
+  margin-block-end: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--crt-border);
+}
+
+.hint {
+  margin-block-end: var(--space-3);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+}
+
+.log {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.entry {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1ch;
+  align-items: baseline;
+  margin-block-start: var(--space-3);
+  padding: var(--space-2) 0;
+}
+
+.inputRow:focus-within {
+  background-color: rgb(255 176 0 / 0.05);
+  outline: 1px dashed var(--phosphor-dim);
+  outline-offset: 4px;
+}
+
+.inputWrap {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.input {
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  caret-color: var(--phosphor-bright);
+  caret-shape: block;
+}
+
+.caretHidden {
+  caret-color: transparent;
+}
+
+.restCursor {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  pointer-events: none;
+}

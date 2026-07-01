@@ -1,0 +1,12 @@
+.boot {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding-block: clamp(2rem, 12vh, 6rem) var(--space-5);
+}
+
+.skipHint {
+  margin-block-start: var(--space-5);
+  color: var(--phosphor-dim);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+}

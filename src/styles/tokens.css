@@ -1,0 +1,44 @@
+/*
+ * Design tokens — única fuente de verdad para color, tipografía y espaciado.
+ * Paleta: fósforo ámbar P3 sobre CRT (contrastes medidos sobre --crt-bg).
+ */
+:root {
+  /* superficie */
+  --crt-bg: #0b0906;
+  --crt-surface: #151008;
+  --crt-border: #3d2f14;
+
+  /* fósforo: 10.8:1 / 13:1 / 5.8:1 sobre --crt-bg */
+  --phosphor: #ffb000;
+  --phosphor-bright: #ffd866;
+  --phosphor-dim: #ad8433;
+
+  /* acentos de estado: 11.6:1 / 7.7:1 */
+  --signal-ok: #6fdc8c;
+  --signal-err: #ff7a66;
+
+  /* glow */
+  --glow-text: 0 0 6px rgb(255 176 0 / 0.4);
+  --glow-text-strong: 0 0 2px rgb(255 216 102 / 0.6), 0 0 14px rgb(255 176 0 / 0.35);
+  --glow-icon: drop-shadow(0 0 6px rgb(255 176 0 / 0.55));
+
+  /* tipografía */
+  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Menlo, Consolas, monospace;
+  --font-display: "VT323", "IBM Plex Mono", monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-display: clamp(2.5rem, 1.6rem + 4.5vw, 4.25rem);
+
+  /* espaciado (base 8) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+
+  --measure: 72ch;
+  --radius: 2px;
+}

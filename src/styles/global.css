@@ -1,0 +1,98 @@
+/* Reset mínimo + base de la página */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--crt-bg);
+  color: var(--phosphor);
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--phosphor);
+  color: var(--crt-bg);
+  text-shadow: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--phosphor-bright);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--phosphor-dim);
+  text-underline-offset: 0.25em;
+}
+
+a:hover {
+  color: var(--phosphor-bright);
+  text-decoration-color: currentcolor;
+  text-shadow: var(--glow-text);
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+a,
+button,
+input,
+summary {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgb(255 176 0 / 0.15);
+}
+
+ul {
+  padding: 0;
+}
+
+main {
+  padding-block: clamp(2rem, 10vh, 5rem) var(--space-4);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--measure);
+  margin-inline: auto;
+  padding-inline: max(clamp(1rem, 4vw, 2.5rem), env(safe-area-inset-left))
+    max(clamp(1rem, 4vw, 2.5rem), env(safe-area-inset-right));
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

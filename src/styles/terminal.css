@@ -1,0 +1,57 @@
+/* Vocabulario visual compartido de la sesión de terminal */
+.prompt-line {
+  margin-block: 0 var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.prompt-prefix {
+  color: var(--phosphor-dim);
+  font-weight: 400;
+}
+
+.prompt-cmd {
+  color: var(--phosphor-bright);
+  text-shadow: var(--glow-text);
+}
+
+.output-line {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.dim {
+  color: var(--phosphor-dim);
+}
+
+.ok {
+  color: var(--signal-ok);
+}
+
+.err {
+  color: var(--signal-err);
+}
+
+.cursor {
+  display: inline-block;
+  animation: cursor-blink 1.06s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.term-section {
+  margin-block-end: var(--space-6);
+  scroll-margin-top: var(--space-5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}
